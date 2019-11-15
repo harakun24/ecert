@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <script src="js/jquery.js"></script>
+    <script src="js/dim.js?g=2"></script>
+    <link rel="stylesheet" href="image/css/main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <button id="preview">Preview</button>
+        <button id="cetak">download</button>
+    </div>
+
+    <div class="wrapper">
+        <input type="text" name="no" placeholder="nomor" />
+        <select name="angkatan">
+        <option value="005">005</option>
+        <option value="004">004</option>
+        <option value="003">003</option>
+      </select>
+        <select name="date">
+        <option value="VIII">VIII</option>
+        <option value="XI">XI</option>
+      </select>
+        <input type="text" name="nama" placeholder="nama" />
+        <input type="text" name="nim" placeholder="nim" />
+        <select name="prodi">
+        <option value="S1IF">INFORMATIKA</option>
+        <option value="S1SI">SISTEM INFORMASI</option>
+        <option value="D3MI">MANAJEMEN INFORMASI</option>
+      </select>
+        <select name="semester">
+        <option value="genap">genap</option>
+        <option value="ganjil">ganjil</option>
+      </select>
+        <select name="status">
+        <option value="asisten praktikum">asisten</option>
+        <option value="koor">koor</option>
+      </select>
+        <input type="text" name="predikat" placeholder="predikat" />
+    </div>
+    <script>
+        dim("", () => {
+            let bio = {
+                no: "78",
+                fa: "004/FA/S1SI/AMIKOM/VIII/2018.2019",
+                nama: "vinsensius vinsensius vinsensius abc",
+                nim: "99.99.9999",
+                mk: "Manajemen Sistem Informasi Akuntansi (Management to Accounting Information System)",
+                prodi: "Strata satu Perencanaan Wilayah dan Kota",
+                semester: "Ganjil",
+                ta: "2018/2019",
+                predikat: "sangat baik",
+                mr: 55,
+                status: ""
+            };
+            if (bio.mk.length > 35) {
+                let temp = bio.mk.split(" ");
+                let temp2 = "";
+                $.each(temp, (k, v) => {
+                    temp2 += v;
+                    temp2 += " ";
+                    if (k != 5 && k > 0 && (k + 1) % 3 == 0 && k != temp.length - 1) {
+                        temp2 += "<br/><br/>";
+                    }
+                });
+                bio.mk = temp2;
+                bio.mr -= 25;
+            }
+            if (bio.prodi.length > 23) {
+                let temp = bio.prodi.substr(0, 23) + "<br/><br/>";
+                let temp2 = bio.prodi.substr(23, bio.prodi.length - 1);
+                bio.prodi = temp + temp2;
+                bio.mr -= 25;
+            }
+            if (bio.nama.length > 35) {
+                let temp = bio.nama.substr(0, 30);
+                let arrtemp = temp.split(" ");
+                temp = "";
+                for (i = 0; i < arrtemp.length - 1; i++) {
+                    temp += arrtemp[i] + " ";
+                }
+                temp += arrtemp[arrtemp.length - 1].substr(0, 1) + ".";
+                bio.nama = temp;
+            }
+            let kirim = gElement("#preview");
+            let kirim2 = gElement("#cetak");
+            let refil = () => {
+                bio.no = $("input[name=no]").val();
+            };
+            kirim.click(() => {
+                refil();
+                $.post("preview.php", {
+                    data: bio
+                }).done(data2 => {
+                    var d = new Date();
+                    // console.log(data2);
+                    window.open(
+                        "cetak/preview?n=" +
+                        d.getMilliseconds() +
+                        bio.no +
+                        ".php?signature=" +
+                        bio.fa
+                    );
+                });
+            });
+            kirim2.click(() => {
+                var today = new Date();
+                $.post(
+                    "download/handler.php?signature=" +
+                    bio.fa +
+                    "?token=" +
+                    (Math.random()
+                        .toString(36)
+                        .substring(2, 15) +
+                        Math.random()
+                        .toString(36)
+                        .substring(2, 15)), {
+                        data: bio
+                    }
+                ).done(data2 => {
+                    // console.log(data2);
+                    // window.open("cetak", "_cetak");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

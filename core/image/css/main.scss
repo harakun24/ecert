@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    input,
+    select {
+        margin: 8px;
+        width: 80%;
+        border: 0;
+        border-radius: 3px;
+        background: #e9ebee;
+        padding: 4px;
+        outline: 0;
+        &:hover {
+            background: #e8f0fe;
+        }
+    }
+    select {
+        width: 70%;
+    }
+    margin: {
+        left: 40%;
+        top: 15%;
+    }
+}

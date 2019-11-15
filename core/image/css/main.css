@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 40%;
+  margin-top: 15%;
+}
+
+.wrapper input,
+.wrapper select {
+  margin: 8px;
+  width: 80%;
+  border: 0;
+  border-radius: 3px;
+  background: #e9ebee;
+  padding: 4px;
+  outline: 0;
+}
+
+.wrapper input:hover,
+.wrapper select:hover {
+  background: #e8f0fe;
+}
+
+.wrapper select {
+  width: 70%;
+}
+/*# sourceMappingURL=main.css.map */

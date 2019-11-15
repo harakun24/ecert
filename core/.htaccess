@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^cetak.*$ output.php
+RewriteRule ^download.*$ download.php
