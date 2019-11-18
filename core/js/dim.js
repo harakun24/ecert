@@ -31,7 +31,7 @@ create = function(type) {
     result.text = val => {
         result.innerHTML = val;
     };
-    result.attr = val => {
+    result.attrArr = val => {
         $.each(val, function(key, isi) {
             result.setAttribute(key, isi);
         });
@@ -140,7 +140,7 @@ gElement = function(param) {
     temp.child = function(child) {
         temp.append(child);
     };
-    temp.attr = val => {
+    temp.attrArr = val => {
         $.each(val, function(key, isi) {
             temp.attr(key, isi);
         });

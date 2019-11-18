@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background: #35afce;
+  position: relative;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.185);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.185);
+}
+
+.header h1 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 100px;
+  margin-left: 50px;
+}
+
+.header button {
+  width: 15%;
+  height: 40px;
+  max-width: 76px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -20px;
+  margin-right: 20px;
+  border: 1px solid #e4f738;
+  background: #e4f738;
+  font-weight: bold;
+  color: #0eaa88;
+  -webkit-transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
+  transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
+  cursor: pointer;
+}
+
+.header button:hover {
+  color: #e4f738;
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  height: 75vh;
+  border-radius: 8px;
+  margin-top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container form {
+  font-size: 150%;
+  width: 100%;
+  max-width: 600px;
+  color: #4199b4;
+}
+
+.container form input {
+  margin-top: 5px;
+  outline: 0;
+  border: none;
+}
+
+.container form input[type=text] {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  border: 2px solid #35b7ce;
+  width: 65%;
+  float: left;
+}
+
+.container form input[type=submit] {
+  height: 40px;
+  width: 15%;
+  font-size: 80%;
+  cursor: pointer;
+  background: #35b7ce;
+  margin-left: 18px;
+  color: white;
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.container form input[type=submit]:hover {
+  background: #42cbf5;
+  width: 20%;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  color: #36383bb2;
+  background: #7c7d7e83;
+  position: absolute;
+  bottom: 0;
+}
+
+table {
+  width: 180%;
+  max-width: 1275px;
+  min-width: 1000px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table th,
+table td {
+  padding: 6px;
+}
+
+table tr {
+  -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.349);
+          box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.349);
+  -webkit-transition: cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
+}
+
+table tr:nth-child(even) {
+  color: rgba(102, 99, 99, 0.692);
+}
+
+table tr:nth-child(odd) {
+  color: rgba(0, 0, 0, 0.692);
+}
+
+table tr:nth-child(1) {
+  background: white;
+}
+
+table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 90%;
+  vertical-align: top;
+  -webkit-transition: cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
+}
+
+table td a {
+  text-decoration: none;
+  color: #75baf3;
+}
+
+table td a:hover > img {
+  width: 12%;
+}
+
+table td a img {
+  width: 12%;
+  -webkit-transition: cubic-bezier(0.77, 0, 0.175, 1) 0.25s;
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.25s;
+  margin-left: 4px;
+}
+
+table th {
+  color: rgba(0, 0, 0, 0.692);
+}
+
+table th:nth-child(2), table th:nth-child(3) {
+  width: 20%;
+}
+
+table th:nth-child(7) {
+  width: 10%;
+}
+
+.tbl {
+  width: 95%;
+  max-width: 1275px;
+  overflow: scroll;
+  margin-top: 0px;
+  max-height: 380px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 255, 242, 0.219);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(32, 217, 223, 0.397);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 174, 228, 0.658);
+}
+
+.info {
+  width: 34%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 20px;
+}
+
+.info li {
+  font-size: 60%;
+  direction: rtl;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(28, 116, 248, 0.767);
+}
+
+.info li:nth-child(2) {
+  color: #f8aa35;
+}
+/*# sourceMappingURL=main.css.map */

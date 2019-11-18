@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./core/js/jquery.js"></script>
+    <script src="./core/js/dim.js?v=3"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <body>
+        <div class="header">
+            <h1>Publikasi E-sertifikat</h1>
+            <button id="login">Login</button>
+        </div>
+        <div class="container">
+            <form action="#">
+                <label for="nomor">Cari e-sertifikatmu</label>
+                <div class="blok">
+                    <input type="text" onkeyup="pencarian()" id="cari" name="nomor" placeholder="Contoh: 107/004/FA/S1KWU/XI/2018-2019">
+                    <input type="submit" value="Cari">
+                </div>
+                <div class="info">
+                    <li><i> Total 354</i></li>
+                    <li><i> Baru 102</i></li>
+                </div>
+            </form>
+            <div class="tbl">
+                <table id="displayTable">
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Nomor</th>
+                        <th>&nbsp;&nbsp;Nama Asisten&nbsp;&nbsp;</th>
+                        <th>Mata kuliah</th>
+                        <th>Prodi</th>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;Preview&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>001/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>Vinsensius Dimas Abista</td>
+                        <td>Pemrograman Lanjut</td>
+                        <td>S1 Informatika</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>002/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>Vinsensius Vinsensius Dimas Abista</td>
+                        <td>Manajemen Sistem Informasi Akuntansi (Management to Accounting Information System)</td>
+                        <td>Strata satu Perencanaan Wilayah dan Kota</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>003/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>Vinsensius Dimas Abista</td>
+                        <td>Pemrograman Lanjut</td>
+                        <td>S1 Informatika</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>004/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>Vinsensius Dimas Abista</td>
+                        <td>Pemrograman Lanjut</td>
+                        <td>S1 Informatika</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>005/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>Vinsensius Vinsensius Dimas Abista</td>
+                        <td>Manajemen Sistem Informasi Akuntansi (Management to Accounting Information System)</td>
+                        <td>Strata satu Perencanaan Wilayah dan Kota</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>006/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>Vinsensius Dimas Abista</td>
+                        <td>Pemrograman Lanjut</td>
+                        <td>S1 Informatika</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>007/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>yosua putra</td>
+                        <td>Pemrograman Lanjut</td>
+                        <td>S1 Informatika</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16/02/2019</td>
+                        <td>008/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>bayu aji</td>
+                        <td>Manajemen Sistem Informasi Akuntansi (Management to Accounting Information System)</td>
+                        <td>Strata satu Perencanaan Wilayah dan Kota</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>17/02/2019</td>
+                        <td>009/005/FA/S1IF/VIII/2019-2020</td>
+                        <td>hey tayo</td>
+                        <td>Pemrograman Lanjut</td>
+                        <td>S1 Informatika</td>
+                        <td>Sangat Baik</td>
+                        <td>
+                            <a href="#">link preview<img src="core/image/link.png" /></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Supported by <b> IT Support FA</b></p>
+        </div>
+        <script>
+            function pencarian() {
+                // Declare variables
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("cari");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("displayTable");
+                tr = table.getElementsByTagName("tr");
+
+                // Loop through all table rows, and hide those who don't match the search query
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    td1 = tr[i].getElementsByTagName("td")[1];
+                    td2 = tr[i].getElementsByTagName("td")[2];
+                    td3 = tr[i].getElementsByTagName("td")[3];
+
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        txtValue1 = td1.textContent || td1.innerText;
+                        txtValue2 = td2.textContent || td2.innerText;
+                        txtValue3 = td3.textContent || td3.innerText;
+                        if ((txtValue.toUpperCase().indexOf(filter) > -1) || (txtValue1.toUpperCase().indexOf(filter) > -1) || (txtValue2.toUpperCase().indexOf(filter) > -1) || (txtValue3.toUpperCase().indexOf(filter) > -1)) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            dim("", json => {
+                // alert('hai');
+                let ph = gElement("#cari");
+                let str = [
+                    "Contoh: 107/004/FA/S1KWU/XI/2018-2019",
+                    "Atau by nama: Daffa Kumara",
+                    "bisa juga cari tanggal: 16/02/2019"
+                ];
+                let i = 0;
+                setInterval(() => {
+                    ph.attr("placeholder", str[i]);
+                    i < 3 ? i++ : i = 0;
+
+                }, 6000);
+            })
+        </script>
+    </body>
+
+</html>
