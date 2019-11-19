@@ -1,0 +1,19 @@
+1.000.000 / 20 transaksi = 50.000
+20 transaksi / 5 weeks = 4 transaksi/week
+
+-155 x 1 ->tenda
+-64 4x4 x2 
+-36 3x3 x3
+50 x1 ->kipas
+35 x3 ->hs
+65 x2 ->perpanjangan
+-32 2x2 x3
+-40 void x2
+-54 x2 ->ms
+-80 x1 ->kb
+=20
+=>1040k
+
+------------------------------------------------------
+w1 = tenda,4x4,3x3,ms 4
+w2 = 4x4, 
