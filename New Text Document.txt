@@ -17,3 +17,5 @@
 ------------------------------------------------------
 w1 = tenda,4x4,3x3,ms 4
 w2 = 4x4, 
+
+https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/#working-with-events
