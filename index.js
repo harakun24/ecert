@@ -23,3 +23,4 @@ $.get("data.dim",(data)=>{
     console.log(txt);
 
 });
+//ini okmen
