@@ -24,3 +24,4 @@ $.get("data.dim",(data)=>{
 
 });
 //ini okmen
+//iki 2
